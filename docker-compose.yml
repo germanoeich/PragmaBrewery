@@ -1,0 +1,17 @@
+version: '2'
+services:
+  api:
+    build: ./api
+    ports:
+      - '3001:3001'
+      - '8080:8080'
+  thermometer-mock:
+    depends_on: 
+      - api
+    build: ./thermometer-mock
+  web:
+    build: ./web
+    depends_on: 
+      - api
+    ports:
+      - '3000:3000'

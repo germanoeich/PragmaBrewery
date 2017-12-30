@@ -1,0 +1,61 @@
+.BeerThermometer {
+    box-shadow: 0px 0px 20px 0px green;
+    box-sizing: border-box;
+    border-radius: 15px;
+    max-height: 20vh;
+    padding: 20px;
+    margin: 1%;
+    min-width: 400px;
+    width: 48%;
+    display: flex;
+    float: left;
+    vertical-align: middle;
+    align-items: center;
+}
+
+@media screen and (max-width: 834px) {
+    .BeerThermometer {
+        width: 98%;
+    }
+} 
+
+.BeerThermometer.warning {
+    box-shadow: 0px 0px 20px 0px red;
+}
+
+.BeerThermometer > .icon {
+    min-width: 64px;
+    min-height: 64px;
+    max-width: 128px;
+    max-height: 128px;
+    width: 10%;
+    height: 10%;  
+    margin-right: 4%;
+}
+
+.BeerThermometer .icon-ok {
+    color: green;
+}
+
+.BeerThermometer .icon-warning {
+    color: red;
+}
+
+.BeerThermometer > .text-container {
+    float: left;
+    text-align: left;
+    margin-right: 4%;
+    vertical-align: middle;
+    height: 100%;
+}
+
+    .BeerThermometer > .text-container label {
+        display: block;
+        margin-top: 5px;
+    }
+
+.BeerThermometer .canvas-container {
+    position: relative;
+    width: 60%;
+    float: right;
+}
